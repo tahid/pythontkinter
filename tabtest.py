@@ -8,7 +8,8 @@ def demo():
     root.title("ttk.Notebook")
     p1 = tk.PhotoImage(file = 'icons8-judge-64.png')
     root.iconphoto(False, p1)
-
+    root.wm_iconphoto(False, p1)
+   
     nb = ttk.Notebook(root)
 
     # adding Frames as pages for the ttk.Notebook 
