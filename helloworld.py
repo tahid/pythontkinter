@@ -17,8 +17,8 @@ f2 = ttk.Frame(n)   # second page
 n.add(f1, text='One')
 n.add(f2, text='Two')
 
-myLabel = Label(root, text="Hello World!");
-myButton = Button(root, text="Click Me !!",padx=30,pady=10,command=myClick)
+myLabel = Label(f1, text="Hello World!");
+myButton = Button(f2, text="Click Me !!",padx=30,pady=10,command=myClick)
 entry = Entry()
 text_box = Text()
 myLabel.pack()

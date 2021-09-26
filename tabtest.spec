@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(['tabtest.py'],
-             pathex=['C:\\myprojects\\pythontkinter'],
+             pathex=['/private/var/myprojects/_SORT/tinkerpython'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -25,7 +25,7 @@ exe = EXE(pyz,
           a.binaries,
           a.zipfiles,
           a.datas,  
-          [],
+          ["icons8-judge-64.png", "."],
           name='tabtest',
           debug=False,
           bootloader_ignore_signals=False,
