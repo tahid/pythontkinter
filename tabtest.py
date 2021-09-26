@@ -37,8 +37,11 @@ def demo():
     nb.add(page1, text='One')
     nb.add(page2, text='Two')
 
-    nb.pack()
+    nb.pack(expand=1,fill="both")
     CreateUI(root)
+    
+    #('aqua', 'clam', 'alt', 'default', 'classic')#
+    ttk.Style().theme_use('classic')
     root.mainloop()
 
 if __name__ == "__main__":
