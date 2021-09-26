@@ -8,6 +8,7 @@ from PyQt5.QtWidgets import (
     QStackedLayout,
     QVBoxLayout,
     QWidget,
+    QPushButton
 )
 
 class Window(QWidget):
@@ -28,6 +29,11 @@ class Window(QWidget):
         self.page1Layout = QFormLayout()
         self.page1Layout.addRow("Name:", QLineEdit())
         self.page1Layout.addRow("Address:", QLineEdit())
+        button = QPushButton("PyQt5 button")
+        button.setToolTip('This is an example button')
+        button.move(100,70)
+
+        self.page1Layout.addRow("Address:",button)
         self.page1.setLayout(self.page1Layout)
         self.stackedLayout.addWidget(self.page1)
         # Create the second page
