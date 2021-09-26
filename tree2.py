@@ -13,8 +13,13 @@ class view(QWidget):
         self.model.setHorizontalHeaderLabels(['Name', 'Height', 'Weight'])
         self.tree.header().setDefaultSectionSize(180)
         self.tree.header().setStretchLastSection(False)
-        self.tree.header().setSectionResizeMode(QHeaderView.ResizeMode.Stretch); 
+        #
         self.tree.setModel(self.model)
+        self.tree.header().resizeSection(1, 400)
+        self.tree.header().setMinimumSectionSize(100)
+        self.tree.header().resizeSection(0, 100)
+        self.tree.header().setSectionResizeMode(0,QHeaderView.ResizeMode.Stretch); 
+        #self.tree.resizeColumnToContents(0)
         self.importData(data)
         self.tree.expandAll()
     def importData(self, data, root=None):
