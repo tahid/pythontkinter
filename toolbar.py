@@ -24,6 +24,7 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(label)
 
         toolbar = QToolBar("My main toolbar")
+        toolbar.setMovable(False)
         toolbar.setIconSize(QSize(24, 24))
         self.addToolBar(toolbar)
 
@@ -49,8 +50,9 @@ class MainWindow(QMainWindow):
 
 
 app = QApplication(sys.argv)
-
+app.setStyle('Fusion')
 window = MainWindow()
+window.setGeometry(300, 100, 1200, 900)
 window.show()
 
 app.exec()
