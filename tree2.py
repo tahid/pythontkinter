@@ -10,8 +10,10 @@ class view(QWidget):
         layout = QVBoxLayout(self)
         layout.addWidget(self.tree)
         self.model = QStandardItemModel()
-        self.model.setHorizontalHeaderLabels(['Name', 'Height', 'Weight'])
-        self.tree.header().setDefaultSectionSize(180)
+        self.model.setHorizontalHeaderLabels(['Name', 'Height', 'Weight', 'Address'])
+       # self.tree.header().setDefaultSectionSize(180)
+        self.tree.header().setStretchLastSection(False)
+        self.tree.header().setSectionResizeMode(2,QHeaderView.ResizeMode.Stretch); 
         self.tree.setModel(self.model)
         self.importData(data)
         self.tree.expandAll()
