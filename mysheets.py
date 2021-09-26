@@ -19,15 +19,9 @@ sheet.enable_bindings(("single_select",
                        "column_width_resize",
 
                        "arrowkeys",
-
                        "right_click_popup_menu",
 
                        "rc_select",
-
-                       "rc_insert_row",
-
-                       "rc_delete_row",
-
                        "copy",
 
                        "cut",
@@ -36,8 +30,6 @@ sheet.enable_bindings(("single_select",
 
                        "delete",
 
-                       "undo",
-
-                       "edit_cell"))
+                       "undo"))
 
 top.mainloop()

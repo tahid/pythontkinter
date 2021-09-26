@@ -19,7 +19,7 @@ def connect():
 
 def View():
 
-    con1 = sqlite3.connect("<path/database_name>")
+    con1 = sqlite3.connect("hellosql")
 
     cur1 = con1.cursor()
 
