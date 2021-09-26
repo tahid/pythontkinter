@@ -59,6 +59,7 @@ if __name__ == '__main__':
         {'unique_id': 4, 'parent_id': 1, 'short_name': 'Tim', 'height': '172', 'weight': '60'}
     ]
     app = QApplication(sys.argv)
+    app.setStyle('Fusion')  
     view = view(data)
     view.setGeometry(300, 100, 600, 300)
     view.setWindowTitle('QTreeview Example')
