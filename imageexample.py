@@ -46,6 +46,7 @@ class Example(QWidget):
     #     self.widget.keyPressed.connect(self.on_key)
         self.setGeometry(50,50,320,200)
         self.setWindowTitle("PyQT show image")
+        self.setFocusPolicy(Qt.StrongFocus)
         self.show()
         
     def keyPressEvent(self, event):
