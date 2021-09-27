@@ -52,9 +52,9 @@ class Example(QWidget):
     def keyPressEvent(self, event):
         key = event.key()
         print('key pressed: %i' % key)
-        if key == QtCore.Qt.Key_z:
+        if key == QtCore.Qt.Key_Z:
             self.close_application()
-        elif key == QtCore.Qt.Key_x:
+        elif key == QtCore.Qt.Key_X:
             self.close_application2()
         else:
             print('key pressed: %i' % key)
