@@ -10,24 +10,13 @@ class Example(QWidget):
 
     def __init__(self):
         super().__init__()
-        myfiles = glob.glob("/var/myprojects/tmpimages/new-thumbs/*.jpg")
         self.qmaps = []
         self.grid = QGridLayout()
         self.two = 1
-        for f in myfiles:
-            self.two+=1
-            tempimg = QPixmap(f)
-            tempimg2 = tempimg.scaled(100,100,Qt.KeepAspectRatio)
-            tempimg = tempimg.scaled(800,600,Qt.KeepAspectRatio)
-            tmplabel = QLabel()
-            tmplabel.setPixmap(tempimg2)
-            self.grid.addWidget(tmplabel,1,self.two)
-            self.qmaps.append(tempimg)
+        tempimg = QPixmap()
+        tempimg = tempimg.scaled(800,600,Qt.KeepAspectRatio)
+        self.qmaps.append(tempimg)
 
-        # self.img1 = QPixmap("./patrick-schneider-I4fDK4Fz_vw-unsplash.jpg")
-        # self.img1 = self.img1.scaled(700,400,Qt.KeepAspectRatio )
-        # self.img2 = QPixmap("./vadim-sadovski-Bu8UgMfqACs-unsplash.jpg")
-        # self.img2 = self.img2.scaled(700,400,Qt.KeepAspectRatio )
         self.test = True;
         self.label = QLabel()
         self.index = 0;
@@ -40,15 +29,32 @@ class Example(QWidget):
         btn.clicked.connect(self.close_application)
         btn.resize(btn.minimumSizeHint())
         btn.move(0,100)
+        btn = QtWidgets.QPushButton("Load", self)
+        btn.clicked.connect(self.load_images)
+        btn.resize(btn.minimumSizeHint())
+        btn.move(0,300)
         
 
     #     self.keyPressed = QtCore.pyqtSignal(int)
     #     self.widget.keyPressed.connect(self.on_key)
-        self.setGeometry(50,50,320,200)
+        self.setGeometry(50,50,920,600)
         self.setWindowTitle("PyQT show image")
         self.setFocusPolicy(Qt.StrongFocus)
         self.show()
-        
+
+    
+    
+    def load_images(self):
+        myfiles = glob.glob("/var/myprojects/tmpimages/new-thumbs/*.jpg")
+        for f in myfiles:
+            self.two+=1
+            tempimg = QPixmap(f)
+            # tempimg2 = tempimg.scaled(100,100,Qt.KeepAspectRatio)
+            tempimg = tempimg.scaled(800,600,Qt.KeepAspectRatio)
+            # tmplabel = QLabel()
+            # tmplabel.setPixmap(tempimg2)
+            # self.grid.addWidget(tmplabel,1,self.two)
+            self.qmaps.append(tempimg)
     def keyPressEvent(self, event):
         key = event.key()
         print('key pressed: %i' % key)

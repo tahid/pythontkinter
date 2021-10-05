@@ -1,0 +1,9 @@
+{
+    "authority": "https://login.microsoftonline.com/organizations",
+    "client_id": "e90218de-0376-433e-845c-f851ce255d71",
+    "scope": ["User.ReadBasic.All"],
+    "username": "info@tahid.co.uk", 
+    "endpoint": "https://graph.microsoft.com/v1.0/users"
+ }
+
+ //https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?client_id=e90218de-0376-433e-845c-f851ce255d71&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A65089&scope=User.ReadBasic.All+offline_access+openid+profile&state=EQKltCvwhrHIYZkg&code_challenge=Y6K3PLHd48kcLFJvYlASE7vFcswRbtx4sW78WBwTmtg&code_challenge_method=S256&nonce=d0869750842682346cb452dbbc28e25feb9f499bf461d27d49434e5b6bfe0ffd&login_hint=info%40tahid.co.uk

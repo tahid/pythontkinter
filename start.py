@@ -1,8 +1,7 @@
 import sys
 
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow, QMenu
-from PyQt5.QtWidgets import QMenuBar
+from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow, QMenu, QMenuBar, QTextEdit
 
 class Window(QMainWindow):
     """Main Window."""
@@ -11,7 +10,7 @@ class Window(QMainWindow):
         super().__init__(parent)
         self.setWindowTitle("Python Menus & Toolbars")
         self.resize(400, 200)
-        self.centralWidget = QLabel("Hello, World")
+        self.centralWidget = QTextEdit()
         self.centralWidget.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
         self.setCentralWidget(self.centralWidget)
     def _createMenuBar(self):
