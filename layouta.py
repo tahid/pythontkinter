@@ -15,6 +15,7 @@ from PyQt5.QtWidgets import (
     QLabel,
     QLineEdit,
     QMainWindow,
+    QPlainTextEdit,
     QPushButton,
     QStatusBar,
     QTextEdit,
@@ -37,10 +38,14 @@ class SimpleLayout(QWidget):
         layout.addRow( QLineEdit())
         layout.addRow("Name:", QLineEdit())
         layout.addRow("Job:", QLineEdit())
+        mytextedit = QPlainTextEdit()
+        mytextedit.setTabChangesFocus(True);
+        layout.addRow("Name:", mytextedit)
+        layout.addRow("Location:", QTextEdit())
         emailLabel = QLabel("Email:")
         layout.addRow(emailLabel, QLineEdit())
         layoutmain.addLayout(layout,1)
-        layoutmain.addWidget(QTextEdit(),3)
+        layoutmain.addWidget(QTextEdit(),1)
         self.setLayout(layoutmain)
 
 class MainWindow(QMainWindow):
